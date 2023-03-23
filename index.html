@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea Individual 3</title>
+    <link rel="shortcut icon" href="https://img.freepik.com/vector-gratis/logotipo-codigo-degradado-creativo_23-2148820572.jpg?w=740&t=st=1679607898~exp=1679608498~hmac=3137752772db29bd322d71c1d03494a3e8181b8573c6e8e4243fe32db16453c8" type="image/x-icon">
+
+    <style>
+        html{
+            /* margin: 800px auto; */
+            text-align: center;
+            justify-content: center;
+            background: #82a7ba;
+        }
+
+        .caja{
+            text-align: center;
+            justify-content: center;
+            margin: 200px auto;
+            /* background-color: red; */
+        }
+
+        .caja h1{
+            margin: 15px;
+            font-size: 40px;
+            font-family: sans-serif;
+            font-weight: 500;
+        }
+
+        .caja button{
+            font-size: 18px;
+            border-radius: 100px;
+            padding: 5px 20px;
+            cursor: pointer;
+            transition: 0.8;
+        }
+
+        .caja button:hover{
+            background: #ccc;
+            /* transition: 0.8; */
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Inicio del formulario con HTML -->
+    <div class="caja">
+    <h1>Conoce la edad de tu mascota canina!</h1>
+
+    <button type="button" onclick="calculo()">Descubrir</button>
+    </div>
+
+    <!-- Inicio del formulario con Javascript -->
+    <div class="formulario" id="form">
+    <script type="text/javascript" >
+        
+        function edad_mascota(edad_humana){
+            let calcular = edad_humana * 7;	
+
+            var mensaje_resul = "Su mascota tiene " + calcular + " años en edad canina";
+
+            return mensaje_resul;
+        }
+
+        function calculo(){
+            var edad_humana = prompt("Introduzca la edad de la mascota (En años humanos): ", "");
+
+            var resultado = edad_mascota(edad_humana);
+
+            alert(resultado); 
+        }
+
+
+    </script>
+    </div>
+</body>
+</html>
